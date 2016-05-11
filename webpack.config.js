@@ -51,8 +51,8 @@ const config = {
       'core-js/es6',
       'core-js/es7/reflect',
       'zone.js',
-      'angular2/common',
-      'angular2/core',
+      '@angular/common',
+      '@angular/core',
       'ts-helpers'
     ],
     'angular2-select': ['ng2-select'],

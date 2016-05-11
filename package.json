@@ -47,11 +47,20 @@
   },
   "homepage": "https://github.com/valor-software/ng2-select#readme",
   "peerDependencies": {
-    "angular2": "2.0.0-beta.15"
+    "@angular/common": "^2.0.0-rc.1",
+    "@angular/compiler": "^2.0.0-rc.1",
+    "@angular/core": "^2.0.0-rc.1",
+    "@angular/platform-browser": "^2.0.0-rc.1",
+    "@angular/platform-browser-dynamic": "^2.0.0-rc.1"
   },
   "dependencies": {},
   "devDependencies": {
-    "angular2": "2.0.0-beta.15",
+    "@angular/common": "^2.0.0-rc.1",
+    "@angular/compiler": "^2.0.0-rc.1",
+    "@angular/core": "^2.0.0-rc.1",
+    "@angular/platform-browser": "^2.0.0-rc.1",
+    "@angular/platform-browser-dynamic": "^2.0.0-rc.1",
+    "@angular/platform-testing-browser": "^2.0.0-rc.1",
     "awesome-typescript-loader": "^0.17.0-rc.6",
     "bootstrap": "3.3.6",
     "clean-webpack-plugin": "0.1.9",
@@ -88,7 +97,7 @@
     "markdown-loader": "0.1.7",
     "marked": "0.3.5",
     "moment": "2.13.0",
-    "ng2-bootstrap": "1.0.13",
+    "ng2-bootstrap": "^1.0.16",
     "phantomjs-polyfill": "0.0.2",
     "phantomjs-prebuilt": "2.1.7",
     "pre-commit": "1.1.2",
@@ -97,7 +106,7 @@
     "raw-loader": "0.5.1",
     "reflect-metadata": "0.1.2",
     "require-dir": "0.3.0",
-    "rxjs": "5.0.0-beta.2",
+    "rxjs": "^5.0.0-beta.6",
     "source-map-loader": "^0.1.5",
     "systemjs-builder": "0.15.15",
     "ts-helpers": "^1.1.0",
@@ -108,7 +117,7 @@
     "typings": "0.8.1",
     "webpack": "1.13.0",
     "webpack-dev-server": "1.14.1",
-    "zone.js": "0.6.12"
+    "zone.js": "^0.6.12"
   },
   "contributors": [
     {
