@@ -4,13 +4,13 @@ import {
   Output,
   EventEmitter,
   ElementRef
-} from 'angular2/core';
+} from '@angular/core';
 import {
   CORE_DIRECTIVES,
   FORM_DIRECTIVES,
   NgClass,
   NgStyle
-} from 'angular2/common';
+} from '@angular/common';
 import {SelectItem} from './select-item';
 import {
   HightlightPipe,
@@ -22,7 +22,7 @@ let optionsTemplate = `
     <ul *ngIf="optionsOpened && options && options.length > 0 && !itemObjects[0].hasChildren()"
         class="ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu">
       <li class="ui-select-choices-group">
-        <div *ngFor="#o of options"
+        <div *ngFor="let o of options"
              class="ui-select-choices-row"
              [class.active]="isActive(o)"
              (mouseenter)="selectActive(o)"
@@ -36,11 +36,11 @@ let optionsTemplate = `
 
     <ul *ngIf="optionsOpened && options && options.length > 0 && itemObjects[0].hasChildren()"
         class="ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu">
-      <li *ngFor="#c of options; #index=index" class="ui-select-choices-group">
+      <li *ngFor="let c of options; let index=index" class="ui-select-choices-group">
         <div class="divider" *ngIf="index > 0"></div>
         <div class="ui-select-choices-group-label dropdown-header">{{c.text}}</div>
 
-        <div *ngFor="#o of c.children"
+        <div *ngFor="let o of c.children"
              class="ui-select-choices-row"
              [class.active]="isActive(o)"
              (mouseenter)="selectActive(o)"
@@ -98,7 +98,7 @@ let optionsTemplate = `
      class="ui-select-container ui-select-multiple ui-select-bootstrap dropdown form-control open">
     <div [ngClass]="{'ui-disabled': disabled}"></div>
     <span class="ui-select-match">
-        <span *ngFor="#a of active">
+        <span *ngFor="let a of active">
             <span class="ui-select-match-item btn btn-default btn-secondary btn-xs"
                   tabindex="-1"
                   type="button"

@@ -52,8 +52,8 @@ const config = {
       'es6-promise',
       'zone.js',
       'reflect-metadata',
-      'angular2/common',
-      'angular2/core'
+      '@angular/common',
+      '@angular/core'
     ],
     'angular2-select': ['ng2-select'],
     'angular2-select-demo': 'demo'
