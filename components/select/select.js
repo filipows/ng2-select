@@ -124,6 +124,12 @@ var Select = (function () {
             this.data.emit(this.active);
         }
     };
+    Select.prototype.ngOnChanges = function (changes) {
+        if (changes['initData'] && changes['initData'].currentValue) {
+            this.active = this.initData.map(function (d) { return new select_item_1.SelectItem(d); });
+            this.data.emit(this.active);
+        }
+    };
     Select.prototype.ngOnDestroy = function () {
         document.removeEventListener('click', this.offSideClickHandler);
         this.offSideClickHandler = null;

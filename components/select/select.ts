@@ -3,7 +3,8 @@ import {
   Input,
   Output,
   EventEmitter,
-  ElementRef
+  ElementRef,
+  OnChanges
 } from '@angular/core';
 import {
   CORE_DIRECTIVES,
@@ -125,7 +126,7 @@ let optionsTemplate = `
   </div>
   `
 })
-export class Select {
+export class Select implements OnChanges {
   @Input()
   allowClear:boolean = false;
   @Input()
@@ -245,6 +246,13 @@ export class Select {
     document.addEventListener('click', this.offSideClickHandler);
 
     if (this.initData) {
+      this.active = this.initData.map(d => new SelectItem(d));
+      this.data.emit(this.active);
+    }
+  }
+
+  ngOnChanges(changes:{}):any {
+    if(changes['initData'] && changes['initData'].currentValue) {
       this.active = this.initData.map(d => new SelectItem(d));
       this.data.emit(this.active);
     }
